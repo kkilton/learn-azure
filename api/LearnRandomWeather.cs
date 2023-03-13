@@ -22,13 +22,13 @@ namespace Learn
         {
             log.LogInformation("C# HTTP trigger function processed a request.");
 
-            string name = req.Query["name"];
+            int numberOfDays = 5;
+            int.TryParse(req.Query["numberOfDays"], out numberOfDays);
 
             string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
             dynamic data = JsonConvert.DeserializeObject(requestBody);
-            name = name ?? data?.name;
 
-            var weatherArray = Enumerable.Range(1, 5).Select(index => new WeatherForecast
+            var weatherArray = Enumerable.Range(1, numberOfDays).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),
                 TemperatureC = Random.Shared.Next(-20, 55),

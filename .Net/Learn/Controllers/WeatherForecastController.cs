@@ -15,12 +15,12 @@ public class WeatherForecastController : ControllerBase
         _logger = logger;
     }
 
-    [HttpGet(Name = "GetWeatherForecast")]
-    public async Task<IEnumerable<WeatherForecast>> Get()
+    [HttpGet(Name = "{numberOfDays}")]
+    public async Task<IEnumerable<WeatherForecast>> Get(int numberOfDays)
     {
         using (var client = new HttpClient())
         {
-            var url = "https://learn-weather.azurewebsites.net/api/LearnRandomWeather";
+            var url = $"https://learn-weather.azurewebsites.net/api/LearnRandomWeather?numberOfDays={numberOfDays}";
             var key = "6A4eVgL/eS7IEiuEHPhBnqAAqWKJfiUdw3I9mpPT0Qq/Oiw7aBP6PA==";
 
             using (var requestMessage =

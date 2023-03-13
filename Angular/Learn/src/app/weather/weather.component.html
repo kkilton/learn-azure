@@ -1,1 +1,37 @@
-<p>weather works!</p>
+<input
+  type="button"
+  id="weather-button"
+  value="Get the weather!"
+  (click)="getWeather()"
+/>
+<input
+  type="number"
+  min="5"
+  max="7"
+  [(ngModel)]="numberOfDays"
+  name="numberOfDays"
+  id="numberOfDays"
+/>
+<table>
+  <thead>
+    <tr>
+      <td>Mon</td>
+      <td>Tue</td>
+      <td>Wed</td>
+      <td>Thu</td>
+      <td>Fri</td>
+      <td>Sat</td>
+      <td>Sun</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td *ngFor="let day of weatherForecasts">
+        {{ formatDate(day.date) }}<br />
+        {{ day.temperatureC }}C<br />
+        {{ day.temperatureF }}F<br />
+        {{ day.summary }}
+      </td>
+    </tr>
+  </tbody>
+</table>
