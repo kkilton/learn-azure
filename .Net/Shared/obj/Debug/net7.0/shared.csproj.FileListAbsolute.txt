@@ -1,0 +1,12 @@
+C:\Code\Azure\learn-azure\.net\shared\bin\Debug\net7.0\shared.deps.json
+C:\Code\Azure\learn-azure\.net\shared\bin\Debug\net7.0\shared.dll
+C:\Code\Azure\learn-azure\.net\shared\bin\Debug\net7.0\shared.pdb
+C:\Code\Azure\learn-azure\.net\shared\obj\Debug\net7.0\shared.csproj.AssemblyReference.cache
+C:\Code\Azure\learn-azure\.net\shared\obj\Debug\net7.0\shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Code\Azure\learn-azure\.net\shared\obj\Debug\net7.0\shared.AssemblyInfoInputs.cache
+C:\Code\Azure\learn-azure\.net\shared\obj\Debug\net7.0\shared.AssemblyInfo.cs
+C:\Code\Azure\learn-azure\.net\shared\obj\Debug\net7.0\shared.csproj.CoreCompileInputs.cache
+C:\Code\Azure\learn-azure\.net\shared\obj\Debug\net7.0\shared.dll
+C:\Code\Azure\learn-azure\.net\shared\obj\Debug\net7.0\refint\shared.dll
+C:\Code\Azure\learn-azure\.net\shared\obj\Debug\net7.0\shared.pdb
+C:\Code\Azure\learn-azure\.net\shared\obj\Debug\net7.0\ref\shared.dll

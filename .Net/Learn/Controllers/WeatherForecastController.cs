@@ -1,16 +1,13 @@
 using Microsoft.AspNetCore.Mvc;
+using Shared;
+using Newtonsoft.Json;
 
 namespace Learn.Controllers;
 
 [ApiController]
-[Route("[controller]")]
+[Route("api/[controller]")]
 public class WeatherForecastController : ControllerBase
 {
-    private static readonly string[] Summaries = new[]
-    {
-        "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-    };
-
     private readonly ILogger<WeatherForecastController> _logger;
 
     public WeatherForecastController(ILogger<WeatherForecastController> logger)
@@ -19,14 +16,22 @@ public class WeatherForecastController : ControllerBase
     }
 
     [HttpGet(Name = "GetWeatherForecast")]
-    public IEnumerable<WeatherForecast> Get()
+    public async Task<IEnumerable<WeatherForecast>> Get()
     {
-        return Enumerable.Range(1, 5).Select(index => new WeatherForecast
+        using (var client = new HttpClient())
         {
-            Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-            TemperatureC = Random.Shared.Next(-20, 55),
-            Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-        })
-        .ToArray();
+            var url = "https://learn-weather.azurewebsites.net/api/LearnRandomWeather";
+            var key = "6A4eVgL/eS7IEiuEHPhBnqAAqWKJfiUdw3I9mpPT0Qq/Oiw7aBP6PA==";
+
+            using (var requestMessage =
+                        new HttpRequestMessage(HttpMethod.Get, url))
+            {
+                requestMessage.Headers.Add("x-functions-key", key);                
+                var response = await client.SendAsync(requestMessage);
+                string result = await response.Content.ReadAsStringAsync();
+                var forecast = JsonConvert.DeserializeObject<IEnumerable<WeatherForecast>>(result);
+                return forecast;
+            }
+        }
     }
 }

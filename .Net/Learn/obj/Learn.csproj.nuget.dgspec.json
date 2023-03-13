@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Code\\azure\\.net\\learn\\Learn.csproj": {}
+    "C:\\Code\\Azure\\learn-azure\\.Net\\Learn\\Learn.csproj": {}
   },
   "projects": {
-    "C:\\Code\\azure\\.net\\learn\\Learn.csproj": {
+    "C:\\Code\\Azure\\learn-azure\\.Net\\Learn\\Learn.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Code\\azure\\.net\\learn\\Learn.csproj",
+        "projectUniqueName": "C:\\Code\\Azure\\learn-azure\\.Net\\Learn\\Learn.csproj",
         "projectName": "Learn",
-        "projectPath": "C:\\Code\\azure\\.net\\learn\\Learn.csproj",
+        "projectPath": "C:\\Code\\Azure\\learn-azure\\.Net\\Learn\\Learn.csproj",
         "packagesPath": "C:\\Users\\krisk\\.nuget\\packages\\",
-        "outputPath": "C:\\Code\\azure\\.net\\learn\\obj\\",
+        "outputPath": "C:\\Code\\Azure\\learn-azure\\.Net\\Learn\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\krisk\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -25,7 +25,11 @@
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Code\\Azure\\learn-azure\\.Net\\shared\\shared.csproj": {
+                "projectPath": "C:\\Code\\Azure\\learn-azure\\.Net\\shared\\shared.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -41,6 +45,10 @@
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[7.0.3, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -62,6 +70,59 @@
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
             },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Code\\Azure\\learn-azure\\.Net\\shared\\shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Code\\Azure\\learn-azure\\.Net\\shared\\shared.csproj",
+        "projectName": "shared",
+        "projectPath": "C:\\Code\\Azure\\learn-azure\\.Net\\shared\\shared.csproj",
+        "packagesPath": "C:\\Users\\krisk\\.nuget\\packages\\",
+        "outputPath": "C:\\Code\\Azure\\learn-azure\\.Net\\shared\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\krisk\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

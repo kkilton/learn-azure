@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "tgcrSemgwYx8RSI10OpazjrBcd+4wdE+JfN4Gf8QK7q/VWgrNeRoK0lp2hNvyjQ1EhCZuwD773SQNMD8iQ0L/A==",
+  "dgSpecHash": "WTDe5z3RKCXMWkdqXnaUJ0wgZCVnG/Zsv9ZM4mQJTPdwUDYNpw27Q4jYQxjdpyYvE1T2Teu7Y2T2QsojN6lrNg==",
   "success": true,
-  "projectFilePath": "C:\\Code\\azure\\.net\\learn\\Learn.csproj",
+  "projectFilePath": "C:\\Code\\Azure\\learn-azure\\.Net\\Learn\\Learn.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\krisk\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.3\\microsoft.aspnetcore.openapi.7.0.3.nupkg.sha512",
     "C:\\Users\\krisk\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\krisk\\.nuget\\packages\\microsoft.openapi\\1.4.3\\microsoft.openapi.1.4.3.nupkg.sha512",
+    "C:\\Users\\krisk\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\krisk\\.nuget\\packages\\swashbuckle.aspnetcore\\6.4.0\\swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
     "C:\\Users\\krisk\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.4.0\\swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
     "C:\\Users\\krisk\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.4.0\\swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",
